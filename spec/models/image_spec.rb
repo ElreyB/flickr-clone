@@ -21,6 +21,6 @@ describe Image do
     tag1 = image.tags.create( { name: "tiger"} )
     tag2 = image.tags.create( { name: "white tiger"} )
     expect(image.tags).to eq [tag1, tag2]
-
   end
+  
 end

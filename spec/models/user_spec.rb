@@ -4,6 +4,7 @@ describe User do
   it { should have_many :comments }
   it { should have_many :images }
   it { should have_many :favorites}
+  it { should validate_uniqueness_of :username}
 
   it "add a favorite" do
     user = FactoryBot.create(:user)

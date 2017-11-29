@@ -1,12 +1,20 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/flickr_clone/spec/models/comment_spec.rb": [
+      "/Users/Guest/Desktop/flickr_clone/spec/features/new_user_pages_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/flickr_clone/spec/rails_helper.rb": [
@@ -565,6 +573,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/Guest/Desktop/flickr_clone/app/models/application_record.rb": [
@@ -581,7 +590,7 @@
         1,
         null,
         1,
-        0,
+        2,
         null,
         null
       ],
@@ -641,7 +650,7 @@
         1,
         null,
         1,
-        0,
+        2,
         null,
         null,
         1,
@@ -753,6 +762,14 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/flickr_clone/spec/models/comment_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
       "/Users/Guest/Desktop/flickr_clone/spec/models/favorite_spec.rb": [
         1,
         null,
@@ -804,6 +821,7 @@
         2,
         2,
         2,
+        2,
         null,
         1,
         1,
@@ -814,6 +832,6 @@
         null
       ]
     },
-    "timestamp": 1511997162
+    "timestamp": 1511997983
   }
 }

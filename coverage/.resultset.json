@@ -711,7 +711,7 @@
         1,
         1,
         null,
-        3,
+        2,
         null
       ],
       "/Users/Guest/Desktop/flickr_clone/app/models/image.rb": [
@@ -725,15 +725,12 @@
         1,
         null,
         1,
-        null,
-        null,
+        1,
+        1,
         1,
         2,
-        2,
-        2,
-        4,
         null,
-        2,
+        1,
         null,
         null
       ],
@@ -752,7 +749,7 @@
         null,
         null,
         1,
-        5,
+        6,
         null,
         null
       ],
@@ -773,6 +770,7 @@
         2,
         2,
         2,
+        null,
         1,
         1,
         1,
@@ -781,7 +779,14 @@
         1,
         1,
         1,
+        null,
+        null,
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -809,6 +814,6 @@
         null
       ]
     },
-    "timestamp": 1511996397
+    "timestamp": 1511997162
   }
 }

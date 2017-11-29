@@ -13,6 +13,6 @@ class Image < ActiveRecord::Base
     favorite_ids.each do |favorite|
       favorites.push(Image.find(favorite.image_id))
     end
-    return favorites
+    favorites
   end
 end

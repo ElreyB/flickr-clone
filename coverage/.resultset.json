@@ -594,7 +594,6 @@
         1,
         1,
         1,
-        1,
         null
       ],
       "/Users/Guest/Desktop/flickr_clone/app/models/tag.rb": [
@@ -616,7 +615,6 @@
         2,
         2,
         2,
-        2,
         null
       ],
       "/Users/Guest/Desktop/flickr_clone/spec/models/tag_spec.rb": [
@@ -630,10 +628,11 @@
         1,
         null,
         1,
-        1,
+        2,
+        2,
         null
       ]
     },
-    "timestamp": 1511977959
+    "timestamp": 1511979450
   }
 }

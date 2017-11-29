@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
   root :to => 'images#index'
 
-  resources :users do
+  devise_for :users
+
+  resources :profiles do
     resources :images
   end
 
-  resources :users do
+  resources :profiles do
     resources :comments
   end
 
-  resources :users do
+  resources :profiles do
     resources :favorites
   end
 
@@ -17,6 +19,5 @@ Rails.application.routes.draw do
     resources :tags
   end
 
-  devise_for :users
 
 end

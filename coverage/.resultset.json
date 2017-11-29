@@ -1,12 +1,10 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/flickr_clone/spec/models/image_spec.rb": [
+      "/Users/Guest/Desktop/flickr_clone/spec/models/comment_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
         2,
         2,
         null
@@ -611,6 +609,16 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/flickr_clone/spec/models/image_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
       "/Users/Guest/Desktop/flickr_clone/spec/models/tag_spec.rb": [
         1,
         null,
@@ -626,6 +634,6 @@
         null
       ]
     },
-    "timestamp": 1511977775
+    "timestamp": 1511977959
   }
 }

@@ -611,6 +611,13 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/flickr_clone/spec/models/tag_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null
+      ],
       "/Users/Guest/Desktop/flickr_clone/spec/models/user_spec.rb": [
         1,
         null,
@@ -619,6 +626,6 @@
         null
       ]
     },
-    "timestamp": 1511977570
+    "timestamp": 1511977775
   }
 }

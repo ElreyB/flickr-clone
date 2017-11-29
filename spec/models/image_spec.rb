@@ -5,5 +5,14 @@ describe Image do
   it { should have_and_belong_to_many :tags }
   it { should have_many :comments }
   it { should have_many :favorites}
-  # it { should have_attached_file(:photo) }
+  it 'return users favorite images' do
+    user = FactoryBot.create(:user)
+    image = FactoryBot.create(:image)
+    image2 = FactoryBot.create(:image)
+    image3 = FactoryBot.create(:image)
+    user.favorites.create({ image_id: image.id, user_id: user.id })
+    user.favorites.create({ image_id: image2.id, user_id: user.id })
+    p Image.get_favorites(user.id)
+    expect(Image.get_favorites(user.id)).to eq [image, image2]
+  end
 end

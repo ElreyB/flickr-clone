@@ -6,4 +6,13 @@ class Image < ActiveRecord::Base
 
   has_attached_file :photo
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
+
+  def self.get_favorites(user_id)
+    favorite_ids = Favorite.user_favorites(user_id)
+    favorites = []
+    favorite_ids.each do |favorite|
+      favorites.push(Image.find(favorite.image_id))
+    end
+    return favorites
+  end
 end

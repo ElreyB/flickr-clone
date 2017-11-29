@@ -9,6 +9,36 @@
   </head>
 
   <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <ul>
+            <li><a class="navbar-brand" href="/">Flickr Clone</a></li>
+          </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><a href="#"><%=current_user.username %></a></li>
+            <li><%= link_to "|  Sign out  |", "/users/sign_out", method: :delete %></li>
+          <% else %>
+            <li><%= link_to "|  Sign up |", '/users/sign_up' %></li>
+            <li><%= link_to "|  Sign in |", '/users/sign_in' %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+     <% if flash[:notice] != nil %>
+       <div class="alert alert-success">
+         <%= flash[:notice] %>
+       </div>
+     <% end %>
+     <% if flash[:alert] != nil %>
+       <div class="alert alert-danger">
+         <%= flash[:alert] %>
+       </div>
+     <% end %>
     <%= yield %>
   </body>
 </html>

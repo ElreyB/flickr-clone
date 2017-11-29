@@ -545,6 +545,7 @@
         null,
         1,
         1,
+        1,
         null
       ],
       "/Users/Guest/Desktop/flickr_clone/app/models/application_record.rb": [
@@ -589,7 +590,14 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/flickr_clone/app/models/favorite.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/flickr_clone/app/models/image.rb": [
+        1,
         1,
         1,
         1,
@@ -608,10 +616,20 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/flickr_clone/spec/models/favorite_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/flickr_clone/spec/models/image_spec.rb": [
         1,
         null,
         1,
+        2,
         2,
         2,
         2,
@@ -630,9 +648,10 @@
         1,
         2,
         2,
+        2,
         null
       ]
     },
-    "timestamp": 1511979450
+    "timestamp": 1511981031
   }
 }

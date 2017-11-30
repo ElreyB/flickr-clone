@@ -5,7 +5,11 @@
     <p><%= @image.title%></p>
     <% if @image.tags.any? %>
       <% @image.tags.each do |tag| %>
-        <p><span class="badge"> <%= tag.name %> </span></p>
+        <p>
+          <span class="badge"> <%= tag.name %> </span><%= link_to "Delete", image_tag_path(@image, tag),
+                :data => {:confirm => "Are you sure?",
+                  :method => 'delete'}%>
+        </p>
       <% end %>
     <% end %>
 

@@ -48,9 +48,16 @@ class TagsController < ApplicationController
   end
 
   def destroy
-    @tag = Tag.find(params[:id])
-    @tag.destroy
-    redirect_to tags_path
+    if params[:image_id]
+      @image = Image.find(params[:image_id])
+      @tag = Tag.find(params[:id])
+      @image.tags.delete(@tag)
+      redirect_to image_path(@image)
+    else
+      @tag = Tag.find(params[:id])
+      @tag.destroy
+      redirect_to tags_path
+    end
   end
 
 private

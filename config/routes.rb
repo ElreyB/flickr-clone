@@ -3,15 +3,15 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :profiles do
+  resources :users do
     resources :images
   end
 
-  resources :profiles do
+  resources :users do
     resources :comments
   end
 
-  resources :profiles do
+  resources :users do
     resources :favorites
   end
 

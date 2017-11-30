@@ -14,9 +14,16 @@ class TagsController < ApplicationController
   end
 
   def create
-    @image = Image.find(params[:id])
+    @image = Image.find(params[:image_id])
     @tag = @image.tags.new(tag_params)
+
     if @tag.save
+      @image.tags.push(@tag)
+      flash[:notice] = "Tag has been added!!"
+      redirect_to image_path(@image)
+    elsif Tag.exists?(:name => @tag.name)
+      tag = Tag.find_by name: @tag.name
+      @image.tags.push(tag)
       flash[:notice] = "Tag has been added!!"
       redirect_to image_path(@image)
     else
@@ -51,5 +58,5 @@ private
   def tag_params
     params.require(:tag).permit(:name)
   end
-  
+
 end

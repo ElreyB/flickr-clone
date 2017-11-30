@@ -23,6 +23,7 @@ class ImagesController < ApplicationController
   def show
     @image = Image.find(params[:id])
     @user = User.find(@image.user_id)
+    @tag = Tag.new
   end
 
   def destroy

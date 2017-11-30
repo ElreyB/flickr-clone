@@ -5,6 +5,7 @@ class Image < ActiveRecord::Base
   has_many :favorites
 
   has_attached_file :photo
+  validates :photo, attachment_presence: true
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 
   def self.get_favorites(user_id)

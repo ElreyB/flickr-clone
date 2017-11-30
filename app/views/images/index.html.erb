@@ -1,1 +1,12 @@
 <h1>Photos!</h1>
+
+<% if @images.any? %>
+  <ul>
+    <% @images.each do |image| %>
+    <li><%= image_tag image.photo %></li>
+    <% end %>
+  </ul>
+<% else %>
+<% end %>
+
+<p><%= link_to "Add photo", new_image_path %> </p>

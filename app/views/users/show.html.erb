@@ -1,1 +1,18 @@
 <h1> Current User: <%= @user.username %> </h1>
+
+<% if @favorites.any? %>
+  <ul>
+    <% @favorites.each do |favorite| %>
+      <li>
+        <div class="thumbnail">
+          <%= image_tag favorite.photo %>
+          <div class="caption">
+            <p><%= favorite.title %></p>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You Currently do not have any favorites!!!</p>
+<% end %>

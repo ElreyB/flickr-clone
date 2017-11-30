@@ -12,7 +12,10 @@ class CommentsController < ApplicationController
       flash[:notice] = "You comment has been added!!!"
       redirect_to image_path(@image)
     else
-      flash[:alert] = "<%= image_tag('oooops.gif') %>"
+      flash[:alert] = "Looks like you did it again....."
+      render :new
     end
   end
+
+
 end

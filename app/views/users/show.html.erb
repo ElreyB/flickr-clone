@@ -1,5 +1,23 @@
 <h1> Current User: <%= @user.username %> </h1>
 
+<% if @user_images.any? %>
+  <ul>
+    <% @user_images.each do |image| %>
+      <li>
+        <div class="thumbnail">
+          <%= image_tag image.photo %>
+          <div class="caption">
+            <p><%= image.title %></p>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You haven't added any images yet!</p>
+<% end %>
+
+
 <% if @favorites.any? %>
   <ul>
     <% @favorites.each do |favorite| %>

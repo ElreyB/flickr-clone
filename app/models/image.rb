@@ -16,4 +16,10 @@ class Image < ActiveRecord::Base
     end
     favorites
   end
+
+  def self.get_user_images(user_id)
+    self.all.select do |image|
+      image.user_id == user_id
+    end
+  end
 end

@@ -15,7 +15,7 @@ class FavoritesController < ApplicationController
       flash[:notice] = "Image has been added to your favorites!"
       redirect_to image_path(@image)
     else
-      flash[:alert] = "Oops! There are errors!"
+      flash[:alert] = "<%= image_tag('oooops.gif') %>"
       render :new
     end
   end

@@ -16,6 +16,7 @@ class ImagesController < ApplicationController
       flash[:notice] = "You image has been saved!"
       redirect_to '/'
     else
+      flash[:alert] = "Looks like you did it again....."
       render :new
     end
   end

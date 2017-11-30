@@ -2,9 +2,14 @@
 <% if @tags.any? %>
   <ul>
     <% @tags.each do |tag| %>
-      <li><%= link_to tag.name, tag_path(tag) %>|<%= link_to "Delete", tag_path(tag),
+      <li>
+        <%= link_to tag.name, tag_path(tag) %>|
+        <% if current_user && current_user.admin %>
+          <%= link_to "Delete", tag_path(tag),
             :data => {:confirm => "Are you sure?",
-              :method => 'delete'}%></li>
+              :method => 'delete'}%>
+        <% end %>
+      </li>
     <% end %>
   </ul>
 <% else %>

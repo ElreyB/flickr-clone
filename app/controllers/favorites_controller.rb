@@ -7,14 +7,15 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @image = Image.find(params[:id])
+    @image = Image.find(params[:image_id])
     @user = current_user
-    @favorite = @user.favorites.new(favorite_params)
+    @favorite = @user.favorites.new
+    @favorite.image_id = @image.id
     if @favorite.save
       flash[:notice] = "Image has been added to your favorites!"
       redirect_to image_path(@image)
     else
-      flash[:alert] = "Oops! There are errors!s"
+      flash[:alert] = "Oops! There are errors!"
       render :new
     end
   end

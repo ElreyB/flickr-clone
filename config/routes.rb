@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   end
 
   resources :images do
+    resources :favorites
+  end
+
+  resources :images do
     resources :tags
   end
 

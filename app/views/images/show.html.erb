@@ -1,0 +1,8 @@
+
+<div class="thumbnail">
+  <%= image_tag @image.photo %>
+  <div class="caption">
+    <p><%= @image.title%></p>
+    <button class="btn"> <%= link_to "Favorite", image_favorites_path(@image), method: 'create' %> </button>
+  </div>
+</div>

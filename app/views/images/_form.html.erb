@@ -1,0 +1,14 @@
+<%= render 'layouts/errors', :object => @image %>
+
+<%= form_for [@user, @image], url: images_path do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control", placeholder: "ex. Fun in Sun" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.file_field :photo %>
+  </div>
+
+  <%= f.submit class: "btn btn-block btn-primary"%>
+<% end %>

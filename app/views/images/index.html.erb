@@ -3,10 +3,17 @@
 <% if @images.any? %>
   <ul>
     <% @images.each do |image| %>
-    <li><%= image_tag image.photo %></li>
+    <li>
+      <div class="thumbnail">
+        <%= image_tag image.photo %>
+        <div class="caption">
+          <p><%= link_to image.title, image_path(image) %></p>
+      </div>
+    </li>
     <% end %>
   </ul>
 <% else %>
+  <p>Currently no photos!</p>
 <% end %>
 
 <p><%= link_to "Add photo", new_image_path %> </p>
